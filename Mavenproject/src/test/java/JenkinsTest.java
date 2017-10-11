@@ -29,9 +29,12 @@ import com.sun.jersey.api.client.WebResource;
  */
 public class JenkinsTest {
     public static void main(String[] args) {
+
         System.out.println("Check 0: List Jobs");
-        List<String> jobList = listJobs("http://localhost:8080/");
+        List<String> jobList = listJobs("http://localhost:8080");
+        for (joblis)
         System.out.println("First Job:" + jobList.get(0));
+        System.out.println("Second Job:" + jobList.get(1));
 
         System.out.println("Check 1: Delete AA_TEST_JOB1 (created manually)");
         deleteJob("http://my.jenkins.com", "AA_TEST_JOB1");
@@ -52,7 +55,7 @@ public class JenkinsTest {
 
     public static List<String> listJobs(String url) {
         Client client = Client.create();
-//		client.addFilter(new com.sun.jersey.api.client.filter.HTTPBasicAuthFilter(USERNAME, PASSWORD));
+	client.addFilter(new com.sun.jersey.api.client.filter.HTTPBasicAuthFilter("daaxh1", "8BBzPBEd"));
         WebResource webResource = client.resource(url + "/api/xml");
         ClientResponse response = webResource.get(ClientResponse.class);
         String jsonResponse = response.getEntity(String.class);
