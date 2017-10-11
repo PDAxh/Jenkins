@@ -30,12 +30,14 @@ import com.sun.jersey.api.client.WebResource;
 public class JenkinsTest {
     public static void main(String[] args) {
 
-        System.out.println("Check 0: List Jobs");
         List<String> jobList = listJobs("http://localhost:8080");
-        for (joblis)
-        System.out.println("First Job:" + jobList.get(0));
-        System.out.println("Second Job:" + jobList.get(1));
 
+        for(String job : jobList) {
+            System.out.println("First Job:" + job);
+        }
+
+
+/*
         System.out.println("Check 1: Delete AA_TEST_JOB1 (created manually)");
         deleteJob("http://my.jenkins.com", "AA_TEST_JOB1");
 
@@ -50,12 +52,12 @@ public class JenkinsTest {
         System.out.println("Check 4: Create AA_TEST_JOB4 by using the xml configuration from the first job (similar to copyJob)");
         String configXML = readJob("http://my.jenkins.com", jobList.get(0));
         createJob("http://my.jenkins.com", "AA_TEST_JOB4", configXML);
-//		deleteJob("http://my.jenkins.com", "AA_TEST_JOB4");
+// 	deleteJob("http://my.jenkins.com", "AA_TEST_JOB4"); */
     }
 
     public static List<String> listJobs(String url) {
         Client client = Client.create();
-	client.addFilter(new com.sun.jersey.api.client.filter.HTTPBasicAuthFilter("daaxh1", "8BBzPBEd"));
+	    client.addFilter(new com.sun.jersey.api.client.filter.HTTPBasicAuthFilter("daaxh1", "Winner6"));
         WebResource webResource = client.resource(url + "/api/xml");
         ClientResponse response = webResource.get(ClientResponse.class);
         String jsonResponse = response.getEntity(String.class);
