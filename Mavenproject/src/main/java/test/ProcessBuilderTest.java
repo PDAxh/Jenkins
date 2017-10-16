@@ -17,7 +17,7 @@ public class ProcessBuilderTest {
                 );
 
         pb.start();
-        pb.close();
+       
 
     }
 }
