@@ -33,6 +33,7 @@ public class Calculator {
                     break;
                 case '^': answer = Maths.power(inputA, inputB);
                     break;
+                case '%' : answer = Maths.modular(inputA, inputB);
             }
 
             System.out.println(answer);

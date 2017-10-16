@@ -30,4 +30,12 @@ public class Maths {
         return answer;
     }
 
+    double modular(double a, double b){
+
+        double answer = (a % b);
+
+        return answer;
+    }
+
+
 }
