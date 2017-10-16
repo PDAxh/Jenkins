@@ -10,14 +10,25 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+                    steps {
+                        sh 'make check || true'
+                        junit '**/target/*.xml'
+                    }
+                }
+
+          stage('Deploy') {
+
+                    when {
+                      expression {
+                        currentBuild.result == null || currentBuild.result == 'SUCCESS' 1
+                      }
+                    }
+
+                    steps {
+                        sh 'make publish'
+                    }
+
+           }
         }
     }
-}
+
