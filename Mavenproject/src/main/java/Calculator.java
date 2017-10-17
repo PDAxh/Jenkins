@@ -16,7 +16,6 @@ public class Calculator {
         while (done == false) {
             System.out.println("add some new text for test jenkins just!");
             System.out.print("Please enter you first number: ");
-
             inputA = input.nextDouble();
             System.out.print("Please enter type of operation: ");
             operator = input.next().charAt(0);
@@ -36,12 +35,8 @@ public class Calculator {
                     break;
                 case '%' : answer = Maths.modular(inputA, inputB);
             }
-
             System.out.println(answer);
         }
-
         input.close();
-
     }
-
 }
