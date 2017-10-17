@@ -13,7 +13,7 @@ public class Calculator {
         char operator;
         boolean done = false;
 
-        while (done == false) {
+        while (done == true) {
             System.out.println("add some new text for test jenkins just!");
             System.out.print("Please enter you first number: ");
             inputA = input.nextDouble();
@@ -37,6 +37,9 @@ public class Calculator {
             }
             System.out.println(answer);
         }
+
+        System.out.println(" testar för jenikns check/bugg fix plugins");
+        
         input.close();
     }
 }
