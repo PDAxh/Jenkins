@@ -14,6 +14,7 @@ public class Calculator {
         boolean done = false;
 
         while (done == false) {
+            System.out.println("add some new text for test jenkins just!");
             System.out.print("Please enter you first number: ");
 
             inputA = input.nextDouble();
