@@ -27,7 +27,7 @@ public class Calculator {
                     break;
                 case '-': answer = Maths.subtract(inputA, inputB);
                     break;
-                case '*': answers = Maths.multiply(inputA, inputB);
+                case '*': answer = Maths.multiply(inputA, inputB);
                     break;
                 case '/': answer = Maths.divide(inputA, inputB);
                     break;

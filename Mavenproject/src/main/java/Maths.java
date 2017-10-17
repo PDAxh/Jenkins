@@ -16,7 +16,7 @@ public class Maths {
     }
 
     double divide(double a, double b) {
-        double answer = a/-b;
+        double answer = a/b;
         return answer;
     }
 
